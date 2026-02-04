@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft Yahei', sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .profile {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .profile h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .profile p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .options {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 50px 0;
+            flex-wrap: wrap;
+        }
+        .option-btn {
+            padding: 12px 30px;
+            background-color: #4285f4;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .option-btn:hover {
+            background-color: #3367d6;
+        }
+        .option-btn.qq {
+            background-color: #12b7f5;
+        }
+        .option-btn.qq:hover {
+            background-color: #0e9ed9;
+        }
+        .option-btn.album {
+            background-color: #fbbc05;
+            color: #333;
+        }
+        .option-btn.album:hover {
+            background-color: #f9aa00;
+        }
+        .photo-section {
+            margin-top: 80px;
+        }
+        .photo-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4285f4;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .photo-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .photo-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .photo-item img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 个人信息 -->
+        <section class="profile">
+            <img src="你的头像链接.jpg" alt="我的头像" class="avatar">
+            <h1>你好，我是XXX</h1>
+            <p>这里可以写你的个人介绍，比如你的兴趣爱好、职业或者一句话自我介绍。</p>
+        </section>
+
+        <!-- 功能按钮 -->
+        <section class="options">
+            <a href="mailto:你的谷歌邮箱@gmail.com" class="option-btn">📧 谷歌邮箱</a>
+            <a href="https://im.qq.com/" target="_blank" class="option-btn qq">🐧 QQ号：123456789</a>
+            <a href="#gallery" class="option-btn album">🖼️ 相册</a>
+        </section>
+
+        <!-- 图片展示区 -->
+        <section class="photo-section" id="gallery">
+            <h2>我的相册</h2>
+            <div class="photo-grid">
+                <div class="photo-item"><img src="图片1链接.jpg" alt="照片1"></div>
+                <div class="photo-item"><img src="图片2链接.jpg" alt="照片2"></div>
+                <div class="photo-item"><img src="图片3链接.jpg" alt="照片3"></div>
+                <div class="photo-item"><img src="图片4链接.jpg" alt="照片4"></div>
+                <div class="photo-item"><img src="图片5链接.jpg" alt="照片5"></div>
+                <div class="photo-item"><img src="图片6链接.jpg" alt="照片6"></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
