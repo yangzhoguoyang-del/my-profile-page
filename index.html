@@ -145,5 +145,55 @@
             </div>
         </section>
     </div>
+    <!-- 评论区样式（适配原有页面风格，无冲突） -->
+<style>
+    .comment-section {
+        max-width: 800px;
+        margin: 80px auto 40px;
+        padding: 0 20px;
+    }
+    .comment-section h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #4285f4;
+    }
+    /* 适配Gitalk样式，和原有页面统一 */
+    .gt-header-textarea {
+        border-radius: 8px !important;
+        box-shadow: 0 0 10px rgba(0,0,0,0.05) !important;
+    }
+    .gt-btn {
+        border-radius: 6px !important;
+        padding: 6px 16px !important;
+    }
+</style>
+
+<!-- 评论区容器 -->
+<section class="comment-section">
+    <h2>留言评论</h2>
+    <div id="gitalk-container"></div>
+</section>
+
+<!-- 引入Gitalk依赖（CDN加载，无需本地下载） -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+<!-- 初始化Gitalk评论功能（已填好配置） -->
+<script>
+    var gitalk = new Gitalk({
+        clientID: '0v231iRTp1ifFr3RXO1c', // 你的Client ID
+        clientSecret: '4097b71c0cf1d52e58ace1bf8b73248d4d8fc555', // 你的Client Secret
+        repo: 'my-profile-page', // 你的仓库名
+        owner: 'yangzhoguoyang-del', // 你的GitHub用户名
+        admin: ['yangzhoguoyang-del'], // 仓库管理员
+        id: location.pathname, // 按页面路径生成唯一评论区
+        distractionFreeMode: false, // 关闭无干扰模式
+        language: 'zh-CN' 
+    })
+    gitalk.render('gitalk-container')
+</script>
+
 </body>
 </html>
